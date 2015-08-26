@@ -7,11 +7,15 @@ puts "What's your guess?"
 guess = gets.to_i
 puts guess # check test line **REMOVE**
 
+while [guess != secret_num]
+  if guess == secret_num
+    puts "YOU GOT ME!"
+    exit
+  end
   if guess < secret_num
     puts "Too low... try again..."
-
   else
     puts "Too high... try again..."
-
   end
   guess = gets.to_i
+end
