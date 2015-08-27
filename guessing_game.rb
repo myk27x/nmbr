@@ -15,15 +15,15 @@ while guesses <= 5
     puts "YOU GOT ME!"
     exit
   end
-  if guess < secret_num
-    puts "Too low... try again..."
-  else
-    puts "Too high... try again..."
-  end
   if guesses == 5
     puts "NOPE! It was #{secret_num}!"
     puts "I WIN!!! YOU LOSE!!! I WIN!!! YOU LOSE!!!"
     exit
+  end
+  if guess < secret_num
+    puts "Too low... try again..."
+  else
+    puts "Too high... try again..."
   end
   guess = gets.to_i
   guesses = guesses +1
